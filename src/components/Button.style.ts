@@ -18,11 +18,11 @@ export const ButtonStyled = styled.button<ButtonStyledProps>`
   width: 100px;
   height: 40px;
   margin: 5px;
-  border-radius: 8px;
+  border-radius: 4px;
   border: 0;
 
   color: ${props => props.theme.white};
-  background-color: ${props => props.theme.primary}
+  background-color: ${props => props.theme['green-500']}
 
   /* ${props => {
     console.log(props)
