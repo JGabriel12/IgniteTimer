@@ -19,9 +19,9 @@ export const ButtonStyled = styled.button<ButtonStyledProps>`
   height: 40px;
   margin: 5px;
   border-radius: 8px;
-  border: solid 1px black;
+  border: 0;
 
-  color: ${props => props.theme.primary};
+  color: ${props => props.theme.white};
   background-color: ${props => props.theme.primary}
 
   /* ${props => {
