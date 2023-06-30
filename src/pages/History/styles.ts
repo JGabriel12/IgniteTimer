@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const HistoryContainer = styled.main`
  flex: 1;
- padding: 3.5rem;
+ padding: 1.5rem;
 
  display: flex;
  flex-direction: column;
@@ -11,13 +11,15 @@ export const HistoryContainer = styled.main`
   font-size: 1.5rem;
   color: ${props => props.theme['gray-100']};
  }
+
 `
 
 export const HistoryList = styled.div`
   flex: 1;
+  max-height: 53vh;
   overflow-y: scroll;
-  margin-top: 2rem;
-
+  margin-top: 1.5rem;
+  
   table {
     width: 100%;
     border-collapse: collapse;
@@ -30,7 +32,7 @@ export const HistoryList = styled.div`
       color: ${props => props.theme['gray-100']};
       font-size: 0.875rem;
       line-height: 1.6;
-
+      
       &:first-child {
         border-top-left-radius: 8px;
         padding-left: 1.5rem;
@@ -41,14 +43,14 @@ export const HistoryList = styled.div`
         padding-right: 1.5rem;
       }
     }
-
+    
     td {
       background-color: ${props => props.theme['gray-700']};
       border-top: 4px solid ${props => props.theme['gray-800']};
       padding: 1rem;
       font-size: 0.875rem;
       line-height: 1.6;
-
+      
       &:first-child {
         width: 50%;
         padding-left: 1.5rem;
@@ -58,5 +60,12 @@ export const HistoryList = styled.div`
         padding-right: 1.5rem;
       }
     }
+   
   }
+`
+
+export const Status = styled.span`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 `
