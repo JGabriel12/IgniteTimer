@@ -67,10 +67,11 @@ export function Home() {
   }
 
   function handleInterruptCycle() {
+    const activeCycleId = activeCycle?.id ?? "";
     setCycles(
       cycles.map(cycle => {
-        if (cycle.id === activeCycle) {
-          return {...cycle, interruptedDate: new Date}
+        if (cycle.id === activeCycleId) {
+          return {...cycle, interruptedDate: new Date() }
         } else {
           return cycle
       }
