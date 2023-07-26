@@ -52,6 +52,20 @@ export function CyclesContextProvider({ children }: CyclesContextProviderPros) {
           ...state,
           cycles: state.cycles.map(cycle => {
             if (cycle.id === state.activeCycleId) {
+              return { ...cycle, interruptedDate: new Date() }
+            } else {
+              return cycle
+            }
+          }),
+          activeCycleId: null
+        }
+      }
+
+      if (action.type === 'MARK_CYCLE_AS_FINISHED') {
+        return {
+          ...state,
+          cycles: state.cycles.map(cycle => {
+            if (cycle.id === state.activeCycleId) {
               return { ...cycle, finishedDate: new Date() }
             } else {
               return cycle
